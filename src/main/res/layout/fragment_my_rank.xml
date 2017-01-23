@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/my_rank_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/large_margin_2x"
+        android:singleLine="true"
+        android:text="@string/my_rank"
+        android:textColor="@color/default_white"
+        android:textSize="@dimen/text_size_f3" />
+
+    <ImageView
+        android:id="@+id/my_rank_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/my_rank_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/my_rank_title"
+        android:layout_marginLeft="@dimen/large_margin_2x"
+        android:padding="@dimen/tiny_padding"
+        android:scaleType="fitEnd"
+        android:src="@drawable/icon_navi_back" />
+
+    <RelativeLayout
+        android:id="@+id/layout_my_rank_imgs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_rank_title"
+        android:layout_marginTop="@dimen/large_margin">
+
+        <View
+            android:id="@+id/horizontal_bg_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_colorful_line" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/horizontal_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+
+        <!--<com.windfindtech.icommon.view.DynamicImageView-->
+        <!--android:id="@+id/my_rank_avatar"-->
+        <!--android:layout_width="@dimen/user_rank_avatar_size"-->
+        <!--android:layout_height="@dimen/user_rank_avatar_size"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/my_rank_pre_level"-->
+        <!--android:layout_width="@dimen/user_rank_size"-->
+        <!--android:layout_height="@dimen/user_rank_size"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="@dimen/large_margin_6x"-->
+        <!--android:layout_toLeftOf="@id/my_rank_avatar"-->
+        <!--android:src="@drawable/icon_achievement" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/my_rank_pre_level_txt"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/my_rank_pre_level"-->
+        <!--android:layout_marginRight="@dimen/large_margin_4x"-->
+        <!--android:layout_marginTop="@dimen/large_margin_3x"-->
+        <!--android:layout_toLeftOf="@id/my_rank_avatar"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="@string/rank_boneash_user" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/my_rank_next_level"-->
+        <!--android:layout_width="@dimen/user_rank_size"-->
+        <!--android:layout_height="@dimen/user_rank_size"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="@dimen/large_margin_6x"-->
+        <!--android:layout_toRightOf="@id/my_rank_avatar"-->
+        <!--android:src="@drawable/icon_achievement" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/my_rank_next_level_txt"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/my_rank_next_level"-->
+        <!--android:layout_marginLeft="@dimen/large_margin_5x"-->
+        <!--android:layout_marginTop="@dimen/large_margin_3x"-->
+        <!--android:layout_toRightOf="@id/my_rank_avatar"-->
+        <!--android:text="@string/rank_waner_feile" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/my_rank_avatar_level"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignRight="@id/my_rank_avatar"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:src="@drawable/icon_achievement" />-->
+
+    </RelativeLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/my_rank_avatar_txt"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/layout_my_rank_imgs"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="@dimen/large_margin"-->
+    <!--android:text="@string/top_user"-->
+    <!--android:textColor="@color/default_orange"-->
+    <!--android:textSize="@dimen/text_size_f3" />-->
+
+    <ImageView
+        android:id="@+id/arrow_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_my_rank_imgs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/large_margin"
+        android:src="@drawable/arrow_up_blue_purple" />
+
+    <TextView
+        android:id="@+id/my_rank_des_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/arrow_up"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_rounded_corner_blue"
+        android:paddingBottom="@dimen/tiny_padding"
+        android:paddingLeft="@dimen/semi_small_padding"
+        android:paddingRight="@dimen/semi_small_padding"
+        android:paddingTop="@dimen/tiny_padding"
+        android:text="@string/rank_undefined"
+        android:textColor="@color/default_white"
+        android:textSize="@dimen/text_size_f3" />
+
+    <ImageView
+        android:id="@+id/bg_img_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_rank_des_txt"
+        android:layout_marginTop="@dimen/large_margin"
+        android:background="@drawable/user_fragment_front_shadow" />
+
+
+    <TextView
+        android:id="@+id/rank_rules_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bg_img_shadow"
+        android:background="@drawable/selector_pressed_gray_to_white"
+        android:gravity="center"
+        android:paddingBottom="@dimen/small_padding"
+        android:paddingTop="@dimen/small_padding"
+        android:text="@string/rank_rules"
+        android:textColor="@color/grayscale2"
+        android:textSize="@dimen/text_size_f2" />
+
+    <RelativeLayout
+        android:id="@+id/layout_my_rank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rank_rules_txt"
+        android:scrollbars="none"
+        android:background="@color/default_white">
+
+        <LinearLayout
+            android:id="@+id/layout_my_rank_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/small_padding">
+
+            <TextView
+                android:id="@+id/rank_title_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/rank_title"
+                android:textColor="@color/grayscale2" />
+
+            <TextView
+                android:id="@+id/rights_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/rights"
+                android:textColor="@color/grayscale2" />
+
+            <TextView
+                android:id="@+id/login_site_count_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/login_site_count"
+                android:textColor="@color/grayscale2" />
+
+            <TextView
+                android:id="@+id/login_count_txt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/login_count"
+                android:textColor="@color/grayscale2" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/layout_my_rank_title"
+            android:background="@color/grayscale4" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_my_rank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider_view"
+            android:layout_marginTop="@dimen/large_margin_2x" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

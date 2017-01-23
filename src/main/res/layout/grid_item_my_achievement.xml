@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/default_padding">
+
+
+    <ImageView
+        android:id="@+id/img_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/large_margin"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_achievement" />
+
+    <TextView
+        android:id="@+id/achievement_name_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_achievement"
+        android:layout_marginTop="@dimen/default_margin_2x"
+        android:singleLine="true"
+        android:textColor="@color/default_white"
+        android:textSize="@dimen/text_size_f4" />
+
+    <TextView
+        android:id="@+id/achievement_des_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/achievement_name_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textColor="@color/grayscale3"
+        android:textSize="@dimen/text_size_f2"
+        android:ellipsize="marquee" />
+
+
+    <TextView
+        android:id="@+id/achievement_value_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/achievement_des_txt"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/default_white"
+        android:textSize="@dimen/text_size_f4"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

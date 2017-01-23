@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical"
+			  style="@style/backgroundWhite">
+
+	<include layout="@layout/comp_title_with_back"/>
+
+	<RelativeLayout
+		android:id="@+id/RelativeLayout1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:layout_marginTop="@dimen/large_margin_3x"
+		android:layout_weight="0">
+
+		<EditText
+			android:id="@+id/device_nick_name"
+			style="@style/device_name_edit"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:enabled="false"
+			android:singleLine="true"
+			android:text="@string/device_name_unknown"
+			android:textColor="@color/default_fg_color"
+			android:hint="@string/device_name_hint"
+			android:maxLength="@integer/device_name_max_length"/>
+
+		<ImageButton
+			android:id="@+id/device_nick_name_edit"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignBottom="@id/device_nick_name"
+			android:layout_alignTop="@id/device_nick_name"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="@dimen/default_margin"
+			android:layout_toRightOf="@id/device_nick_name"
+			android:background="@android:color/transparent"
+			android:scaleType="center"
+			android:src="@drawable/button_devicename_edit"/>
+
+		<Button
+			android:id="@+id/device_nick_name_confirm"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignBottom="@id/device_nick_name"
+			android:layout_alignTop="@id/device_nick_name"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="@dimen/default_margin"
+			android:layout_toRightOf="@id/device_nick_name"
+			android:text="@string/button_positive"
+			android:visibility="gone"/>
+
+		<TextView
+			android:id="@+id/device_status_view"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:layout_toRightOf="@id/device_nick_name_edit"
+			android:gravity="right"
+			android:text="@string/device_status_pending"
+			android:textColor="@color/default_link_color"/>
+
+	</RelativeLayout>
+
+	<View
+		android:id="@+id/separator1"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:layout_marginTop="@dimen/large_margin"
+		android:background="@color/grayscale3"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:layout_marginTop="@dimen/large_margin"
+		android:layout_weight="0">
+
+		<TextView
+			android:id="@+id/auth_date_phrase"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentTop="true"
+			android:text="@string/device_auth_date_phrase"
+			android:textColor="@color/default_black"/>
+
+		<TextView
+			android:id="@+id/login_duration_phrase"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@+id/auth_date_phrase"
+			android:layout_marginTop="@dimen/small_margin"
+			android:text="@string/device_login_duration_phrase"
+			android:textColor="@color/default_black"/>
+
+		<TextView
+			android:id="@+id/login_location_phrase"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@+id/login_duration_phrase"
+			android:layout_marginTop="@dimen/small_margin"
+			android:text="@string/device_login_location_phrase"
+			android:textColor="@color/default_black"/>
+
+		<TextView
+			android:id="@+id/mac_phrase"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:layout_below="@+id/login_location_phrase"
+			android:layout_marginTop="@dimen/small_margin"
+			android:text="@string/device_mac_phrase"
+			android:textColor="@color/default_black"/>
+
+		<TextView
+			android:id="@+id/auth_date_value"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentTop="true"
+			android:layout_toRightOf="@id/auth_date_phrase"
+			android:gravity="right"
+			android:text="@string/device_auth_date_unknown"
+			android:textColor="@color/default_black"/>
+
+		<TextView
+			android:id="@+id/login_duration_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/auth_date_value"
+			android:layout_marginTop="@dimen/small_margin"
+			android:text="@string/device_login_duration_unknown"
+			android:textColor="@color/default_black"/>
+
+		<TextView
+			android:id="@+id/login_location_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/login_duration_value"
+			android:layout_marginTop="@dimen/small_margin"
+			android:text="@string/device_login_location_unknown"
+			android:textColor="@color/default_black"/>
+
+		<TextView
+			android:id="@+id/mac_value"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/login_location_value"
+			android:layout_marginTop="@dimen/small_margin"
+			android:text="@string/device_mac_unknown"
+			android:textColor="@color/default_black"/>
+
+	</RelativeLayout>
+
+	<View
+		android:id="@+id/separator2"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:layout_marginTop="@dimen/large_margin"
+		android:background="@color/grayscale3"/>
+
+	<Button
+		android:id="@+id/approve_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="@dimen/large_margin"
+		android:background="@drawable/button_light"
+		android:paddingLeft="@dimen/large_padding_3x"
+		android:paddingRight="@dimen/large_padding_3x"
+		android:text="@string/device_approve"
+		android:textColor="@color/default_pink"
+		android:textStyle="bold"
+		android:textSize="@dimen/text_size_f4"/>
+
+	<Button
+		android:id="@+id/deny_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="@dimen/large_margin"
+		android:background="@drawable/button_light"
+		android:paddingLeft="@dimen/large_padding_3x"
+		android:paddingRight="@dimen/large_padding_3x"
+		android:text="@string/device_deny"
+		android:textColor="@color/default_pink"
+		android:textStyle="bold"
+		android:textSize="@dimen/text_size_f4"/>
+
+	<Button
+		android:id="@+id/delete_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:layout_marginTop="@dimen/large_margin"
+		android:paddingLeft="@dimen/large_padding_3x"
+		android:paddingRight="@dimen/large_padding_3x"
+		android:text="@string/device_delete"
+		android:textStyle="bold"
+		android:textSize="@dimen/text_size_f4"/>
+
+	<!--     <TextView -->
+	<!--         android:id="@+id/status_view" -->
+	<!--         android:layout_width="wrap_content" -->
+	<!--         android:layout_height="wrap_content" -->
+	<!--         android:layout_weight="0" -->
+	<!--         android:layout_marginTop="20dp" -->
+	<!--         android:text="@string/device_approved" -->
+	<!--         android:textColor="@color/device_approve" -->
+	<!--         android:textSize="@dimen/large_text_size" -->
+	<!--         android:layout_marginLeft="@dimen/fragment_left_margin" -->
+	<!--         android:visibility="gone" /> -->
+
+
+</LinearLayout>

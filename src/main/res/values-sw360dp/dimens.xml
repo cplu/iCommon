@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="text_size_f1">13sp</dimen>
+	<dimen name="text_size_f2">15sp</dimen>
+	<dimen name="text_size_f3">17sp</dimen>
+	<dimen name="text_size_f4">18sp</dimen>
+	<dimen name="text_size_f5">20sp</dimen>
+	<dimen name="text_size_f6">22sp</dimen>
+	<dimen name="text_size_f7">25sp</dimen>
+	<dimen name="text_size_huge">65sp</dimen>
+
+	<dimen name="negative_large_margin">-10dp</dimen>
+	<dimen name="small_margin">1dp</dimen>
+	<dimen name="default_margin">3dp</dimen>
+	<dimen name="default_margin_2x">6dp</dimen>
+	<dimen name="large_margin">10dp</dimen>
+	<dimen name="large_margin_1.5x">15dp</dimen>
+	<dimen name="large_margin_2x">20dp</dimen>
+	<dimen name="large_margin_3x">30dp</dimen>
+	<dimen name="large_margin_4x">40dp</dimen>
+	<dimen name="large_margin_5x">50dp</dimen>
+	<dimen name="large_margin_6x">60dp</dimen>
+	<dimen name="default_margin_2x_negative">-6dp</dimen>
+	<dimen name="large_margin_negative">-10dp</dimen>
+
+	<dimen name="tiny_padding">4dp</dimen>
+	<dimen name="small_padding">8dp</dimen>
+	<dimen name="semi_small_padding">11dp</dimen>
+	<dimen name="semi_small_padding_title">11dp</dimen>
+	<dimen name="default_padding">16dp</dimen>
+	<dimen name="default_padding_1.2x">18dp</dimen>
+	<dimen name="large_padding">20dp</dimen>
+	<dimen name="large_padding_1.5x">30dp</dimen>
+	<dimen name="large_padding_2x">40dp</dimen>
+	<dimen name="large_padding_3x">60dp</dimen>
+
+	<!--weather layout related-->
+	<dimen name="weather_index_gridview_height">160dp</dimen>
+	<dimen name="weather_index_item_height">80dp</dimen>
+	<dimen name="weather_week_curve_height">300dp</dimen>
+	<dimen name="weather_day_curve_height">200dp</dimen>
+
+	<!--oval background-->
+	<dimen name="oval_radius">18dp</dimen>
+	<dimen name="layout_corner_radius">18dp</dimen>
+
+	<!--user fragment related-->
+	<dimen name="round_number_hint_width">18dp</dimen>
+	<dimen name="round_number_hint_height">18dp</dimen>
+</resources>

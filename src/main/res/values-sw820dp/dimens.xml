@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="text_size_f1">17sp</dimen>
+	<dimen name="text_size_f2">19sp</dimen>
+	<dimen name="text_size_f3">21sp</dimen>
+	<dimen name="text_size_f4">24sp</dimen>
+	<dimen name="text_size_f5">27sp</dimen>
+	<dimen name="text_size_f6">32sp</dimen>
+	<dimen name="text_size_f7">38sp</dimen>
+	<dimen name="text_size_huge">80sp</dimen>
+
+	<dimen name="negative_large_margin">-18dp</dimen>
+	<dimen name="small_margin">2dp</dimen>
+	<dimen name="default_margin">6dp</dimen>
+	<dimen name="default_margin_2x">12dp</dimen>
+	<dimen name="large_margin">18dp</dimen>
+	<dimen name="large_margin_1.5x">27dp</dimen>
+	<dimen name="large_margin_2x">36dp</dimen>
+	<dimen name="large_margin_3x">54dp</dimen>
+	<dimen name="large_margin_4x">72dp</dimen>
+	<dimen name="large_margin_5x">90dp</dimen>
+	<dimen name="large_margin_6x">108dp</dimen>
+	<dimen name="default_margin_2x_negative">-12dp</dimen>
+	<dimen name="large_margin_negative">-18dp</dimen>
+	<!--weather layout related-->
+	<dimen name="weather_index_gridview_height">270dp</dimen>
+	<dimen name="weather_index_item_height">140dp</dimen>
+	<dimen name="weather_week_curve_height">435dp</dimen>
+	<dimen name="weather_day_curve_height">290dp</dimen>
+	<!--user fragment related-->
+	<dimen name="round_number_hint_width">25dp</dimen>
+	<dimen name="round_number_hint_height">25dp</dimen>
+</resources>

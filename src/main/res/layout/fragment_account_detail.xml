@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              style="@style/backgroundWhite">
+
+    <include layout="@layout/comp_title_with_back"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_recycled"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
+
+</LinearLayout>

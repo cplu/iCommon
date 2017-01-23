@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/points_records_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/large_margin_2x"
+        android:singleLine="true"
+        android:text="@string/points_records"
+        android:textColor="@color/default_white"
+        android:textSize="@dimen/text_size_f3" />
+
+    <ImageView
+        android:id="@+id/points_records_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/points_records_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/points_records_title"
+        android:layout_marginLeft="@dimen/large_margin_2x"
+        android:padding="@dimen/tiny_padding"
+        android:scaleType="fitEnd"
+        android:src="@drawable/icon_navi_back" />
+
+
+    <View
+        android:id="@+id/horizontal_center_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/points_records_title"
+        android:layout_marginTop="@dimen/huge_margin"
+        android:layout_centerHorizontal="true"></View>
+
+    <TextView
+        android:id="@+id/btn_points_income"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/horizontal_center_placeholder"
+        android:layout_marginLeft="@dimen/large_margin_1.5x"
+        android:layout_marginRight="@dimen/default_margin_2x"
+        android:layout_toLeftOf="@id/horizontal_center_placeholder"
+        android:background="@drawable/bg_purple"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="@dimen/default_padding_1.2x"
+        android:paddingBottom="@dimen/default_padding_1.2x"
+        android:paddingLeft="@dimen/large_padding_1.5x"
+        android:paddingRight="@dimen/large_padding_1.5x"
+        android:singleLine="true"
+        android:text="@string/points_income"
+        android:textColor="@color/default_white"
+        android:textSize="@dimen/text_size_f2" />
+
+    <TextView
+        android:id="@+id/btn_points_expenses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/horizontal_center_placeholder"
+        android:layout_marginLeft="@dimen/default_margin_2x"
+        android:layout_marginRight="@dimen/large_margin_1.5x"
+        android:layout_toRightOf="@id/horizontal_center_placeholder"
+        android:background="@drawable/bg_gray"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingLeft="@dimen/large_padding_1.5x"
+        android:paddingRight="@dimen/large_padding_1.5x"
+        android:singleLine="true"
+        android:text="@string/points_expenses"
+        android:textColor="@color/grayscale3"
+        android:textSize="@dimen/text_size_f2" />
+
+
+    <ImageView
+        android:id="@+id/bg_img_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/btn_points_income"
+        android:background="@drawable/user_fragment_front_shadow" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_income"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bg_img_shadow"
+        android:background="@color/default_white" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_expenses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bg_img_shadow"
+        android:background="@color/default_white" />
+
+
+    <!--<ListView
+        android:id="@id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bg_img_shadow"
+        android:background="@color/grayscale4"
+        android:divider="@color/grayscale4"
+        android:dividerHeight="1dp"
+        android:paddingTop="@dimen/small_padding"></ListView>-->
+
+
+</RelativeLayout>

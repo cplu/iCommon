@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical"
+			  style="@style/backgroundWhite">
+
+	<include layout="@layout/comp_title_with_back"/>
+
+	<EditText
+		android:id="@+id/feedback_content_edit"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:layout_marginTop="5dp"
+		android:layout_weight="5"
+		android:background="@drawable/bg_edit_text_border"
+		android:gravity="top"
+		android:hint="@string/feedback_text_hint"
+		android:textColorHint="@color/grayscale3"
+		android:textColor="@color/default_black"
+		android:inputType="textMultiLine"
+		android:padding="@dimen/tiny_padding"
+		android:singleLine="false"/>
+
+	<Button
+		android:id="@+id/feedback_submit_btn"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:layout_marginTop="@dimen/dimen_margin_gap"
+		android:layout_weight="0"
+		android:paddingBottom="@dimen/text_padding_small"
+		android:paddingTop="@dimen/text_padding_small"
+		android:text="@string/submit_feedback_btn"
+		android:textStyle="bold"/>
+
+	<EditText
+		android:id="@+id/error_report_edit"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:layout_marginTop="20dp"
+		android:layout_weight="2"
+		android:background="@drawable/bg_edit_text_border"
+		android:gravity="top"
+		android:padding="@dimen/tiny_padding"
+		android:textSize="@dimen/text_size_f2"
+		android:textColor="@color/default_black"
+		android:hint="@string/error_report_txt_hint"
+		android:textColorHint="@color/grayscale3"/>
+
+	<Button
+		android:id="@+id/error_report_submit_btn"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:layout_marginTop="@dimen/dimen_margin_gap"
+		android:layout_weight="0"
+		android:paddingBottom="@dimen/text_padding_small"
+		android:paddingTop="@dimen/text_padding_small"
+		android:text="@string/submit_error_report_btn"
+		android:textStyle="bold"/>
+
+	<View
+		android:id="@+id/feedback_placeholder"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="4"/>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="@string/company_info"
+		android:textColor="@color/default_fg_color"
+		android:textSize="@dimen/text_size_f1"
+		android:singleLine="true"
+		android:padding="@dimen/text_padding_default"/>
+
+</LinearLayout>

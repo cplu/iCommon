@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_pressed_white_to_gray">
+
+    <TextView
+        android:id="@+id/item_name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fragment_right_margin"
+        android:layout_marginTop="@dimen/default_margin_2x"
+        android:singleLine="true"
+        android:textColor="@color/transparent_gray_e6"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_f2" />
+
+    <TextView
+        android:id="@+id/item_pt_description_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_name_view"
+        android:layout_marginBottom="@dimen/default_margin_2x"
+        android:layout_marginLeft="@dimen/fragment_right_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textColor="@color/grayscale3"
+        android:textSize="@dimen/text_size_f1" />
+
+
+    <ImageView
+        android:id="@+id/item_forward_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/fragment_right_margin"
+        android:scaleType="centerInside"
+        android:src="@drawable/btn_arrow_forward"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/item_value_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/item_forward_btn"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/large_margin"
+        android:textColor="@color/grayscale3"
+        android:textSize="@dimen/text_size_f3" />
+
+    <View
+        android:id="@+id/separatorView"
+        android:layout_below="@id/item_pt_description_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayscale4" />
+
+
+</RelativeLayout>

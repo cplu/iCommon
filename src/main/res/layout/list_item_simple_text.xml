@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@color/grayscale4">
+
+	<TextView
+		android:id="@+id/simple_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="@dimen/small_padding"
+		android:paddingLeft="@dimen/fragment_left_margin"
+		android:paddingTop="@dimen/small_padding"
+		android:textColor="@color/grayscale3"
+		android:textSize="@dimen/text_size_f2"
+		android:singleLine="true"
+		/>
+</RelativeLayout>

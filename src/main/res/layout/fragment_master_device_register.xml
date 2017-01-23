@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical">
+
+	<include
+		android:id="@+id/master_device_reg_title_layout"
+		layout="@layout/comp_title_with_back"/>
+
+	<LinearLayout
+		android:id="@+id/master_device_register_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/master_device_reg_title_layout"
+		android:padding="@dimen/default_padding"
+		android:orientation="vertical"
+		android:background="@color/default_bg_color">
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_weight="0"
+			android:gravity="center_horizontal"
+			android:text="@string/master_device_register_info1"
+			android:textColor="@color/default_fg_color"/>
+
+		<Button
+			android:id="@+id/master_device_reg_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="10dp"
+			android:layout_weight="0"
+			android:text="@string/master_device_register_btn"
+			android:padding="@dimen/small_padding"
+			/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_weight="0"
+			android:gravity="center_horizontal"
+			android:text="@string/master_device_register_info2"
+			android:textColor="@color/default_fg_color"
+			/>
+
+		<View
+			android:id="@+id/separator1"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"/>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/master_device_confirm_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/master_device_reg_title_layout"
+		android:padding="@dimen/default_padding"
+		android:orientation="vertical"
+		android:visibility="gone"
+		android:background="@color/default_bg_color">
+		<TextView
+			android:id="@+id/auth_date_value"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_weight="0"
+			android:gravity="center_horizontal"
+			android:text="@string/master_device_confirm_info"
+			android:textColor="@color/default_fg_color"
+			/>
+
+		<EditText
+			android:id="@+id/master_device_code"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/fragment_left_margin"
+			android:layout_marginRight="@dimen/fragment_right_margin"
+			android:layout_marginTop="10dp"
+			android:layout_weight="0"
+			android:background="@drawable/bg_edit_text_border"
+			android:inputType="textPassword|number"
+			android:padding="3dp">
+		</EditText>
+
+		<Button
+			android:id="@+id/master_device_submit_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/default_margin_2x"
+			android:text="@string/master_device_submit"
+			android:paddingTop="@dimen/small_padding"
+			android:paddingBottom="@dimen/small_padding"
+			android:paddingLeft="@dimen/default_padding"
+			android:paddingRight="@dimen/default_padding"/>
+
+		<Button
+			android:id="@+id/master_device_reg_retry_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/default_margin_2x"
+			android:text="@string/master_device_register_retry"
+			android:paddingTop="@dimen/small_padding"
+			android:paddingBottom="@dimen/small_padding"
+			android:paddingLeft="@dimen/default_padding"
+			android:paddingRight="@dimen/default_padding"/>
+
+		<Button
+			android:id="@+id/go_to_device_manager_btn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="@dimen/default_margin_2x"
+			android:text="@string/go_to_device_manager"
+			android:paddingTop="@dimen/small_padding"
+			android:paddingBottom="@dimen/small_padding"
+			android:paddingLeft="@dimen/default_padding"
+			android:paddingRight="@dimen/default_padding"/>
+
+		<View
+			android:id="@+id/separator2"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"/>
+	</LinearLayout>
+
+</RelativeLayout>

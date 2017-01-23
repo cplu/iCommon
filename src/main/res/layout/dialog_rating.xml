@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dlg_rating_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/dialog_horizontal_margin"
+    android:layout_marginRight="@dimen/dialog_horizontal_margin"
+    >
+
+    <ImageView
+        android:id="@+id/rating_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/dialog_close_btn" />
+
+    <RelativeLayout
+        android:id="@+id/rl_rating_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating_cancel"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@drawable/dialog_custom_white">
+
+        <TextView
+            android:id="@+id/rating_site_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/large_margin"
+            android:text="@string/rating_site_name_title"
+            android:textColor="@color/default_pink"
+            android:textSize="@dimen/text_size_f4" />
+
+        <TextView
+            android:id="@+id/rating_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating_site_title"
+            android:layout_marginBottom="@dimen/large_margin"
+            android:layout_marginLeft="@dimen/large_margin_1.5x"
+            android:layout_marginRight="@dimen/large_margin_1.5x"
+            android:layout_marginTop="@dimen/large_margin"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="@string/rating_site_name_hint"
+            android:textColor="@color/grayscale3"
+            android:textSize="@dimen/text_size_f2" />
+
+        <RelativeLayout
+            android:id="@+id/rl_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating_description"
+            android:layout_marginTop="@dimen/large_margin"
+            android:background="@color/bg_partly_rating_dialog"
+            android:gravity="center"
+            android:padding="@dimen/small_padding">
+
+            <LinearLayout
+                android:id="@+id/ll_rating_location"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_size_f2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_location"
+                    android:textColor="@color/grayscale1"
+                    android:textSize="@dimen/text_size_f1" />
+
+                <TextView
+                    android:id="@+id/tv_last_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/location"
+                    android:textColor="@color/grayscale1"
+                    android:textSize="@dimen/text_size_f1" />
+
+                <ImageView
+                    android:id="@+id/iv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_position" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_rating_location"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_time"
+                    android:textColor="@color/grayscale1"
+                    android:textSize="@dimen/text_size_f1" />
+
+                <TextView
+                    android:id="@+id/tv_last_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time"
+                    android:textColor="@color/grayscale1"
+                    android:textSize="@dimen/text_size_f1" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_rating_prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ratingbar_height"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rl_rating"
+            android:layout_marginLeft="@dimen/large_margin_2x"
+            android:layout_marginTop="@dimen/default_margin_2x"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="@string/site_rating_prefix"
+            android:textColor="@color/grayscale1"
+            android:textSize="@dimen/text_size_f4" />
+
+        <RatingBar
+            android:id="@+id/rating_value_bar"
+            style="@style/custom_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/text_rating_prefix"
+            android:layout_toRightOf="@id/text_rating_prefix"
+            android:isIndicator="false"
+            android:max="5"
+            android:numStars="5"
+            android:rating="5"
+            android:stepSize="1.0" />
+
+        <GridView
+            android:id="@+id/gridview_rating_choices"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/rating_value_bar"
+            android:layout_marginBottom="@dimen/large_margin"
+            android:layout_marginLeft="@dimen/large_margin_3x"
+            android:layout_marginTop="@dimen/large_margin"
+            android:listSelector="@null"
+            android:numColumns="2"
+            android:visibility="gone"></GridView>
+
+        <EditText
+            android:id="@+id/rating_detail_others"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_rating_detail_height"
+            android:layout_below="@id/gridview_rating_choices"
+            android:layout_marginLeft="@dimen/large_margin_2x"
+            android:layout_marginRight="@dimen/large_margin_2x"
+            android:background="@drawable/bg_edit_text_gray_border"
+            android:gravity="top"
+            android:hint="@string/site_rating_detail_others"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/small_padding"
+            android:textColor="@color/grayscale1"
+            android:textColorHint="@color/grayscale3"
+            android:textSize="@dimen/text_size_f2"
+            android:visibility="gone" />
+        <!--<Button
+            android:id="@+id/rating_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating_detail_others"
+            android:layout_marginLeft="@dimen/large_margin_6x"
+            android:layout_marginRight="@dimen/large_margin_6x"
+            android:layout_marginTop="@dimen/large_margin"
+            android:padding="@dimen/small_padding"
+            android:text="@string/submit"
+            android:textColor="@color/default_white"
+            android:textSize="@dimen/text_size_f4"
+            android:singleLine="true"/>-->
+
+        <View
+            android:id="@+id/line_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rating_detail_others"
+            android:layout_marginTop="@dimen/large_margin"
+            android:background="@color/grayscale4" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/submit_height"
+            android:layout_below="@id/line_placeholder">
+
+            <CheckBox
+                android:id="@+id/checkbox_no_rating_in_two_weeks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/large_margin"
+                android:button="@drawable/selector_icon_no_rating"
+                android:paddingBottom="@dimen/semi_small_padding"
+                android:paddingLeft="@dimen/padding_checkbox"
+                android:paddingTop="@dimen/semi_small_padding"
+                android:singleLine="true"
+                android:text="@string/no_rating_in_two_weeks"
+                android:textColor="@color/grayscale3"
+                android:textSize="@dimen/text_size_f2" />
+
+
+            <View
+                android:id="@+id/line_divider"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grayscale4" />
+
+            <Button
+                android:id="@+id/rating_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/line_divider"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/submit"
+                android:textColor="@color/default_pink"
+                android:textSize="@dimen/text_size_f4" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/weather_index_item_height">
+    <View
+        android:id="@+id/center_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true">
+    </View>
+    <ImageView
+        android:id="@+id/imageview_index"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/center_placeholder"
+        android:layout_marginRight="@dimen/large_margin"
+        android:layout_marginLeft="@dimen/large_margin_3x"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:id="@+id/textview_index_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/center_placeholder"
+        android:layout_above="@id/center_placeholder"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:textColor="@color/default_bg_color"
+        android:textSize="@dimen/text_size_f2"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        />
+
+    <TextView
+        android:id="@+id/textview_index_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/center_placeholder"
+        android:layout_below="@id/center_placeholder"
+        android:layout_marginTop="@dimen/small_margin"
+        android:textColor="@color/default_bg_color"
+        android:textSize="@dimen/text_size_f2"
+        android:singleLine="true"
+        android:includeFontPadding="false"
+        />
+
+</RelativeLayout>

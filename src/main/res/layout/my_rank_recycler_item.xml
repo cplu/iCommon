@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_custom_white_pressed_yellow_bg"
+    android:paddingBottom="@dimen/semi_small_padding"
+    android:paddingLeft="@dimen/small_padding"
+    android:paddingRight="@dimen/small_padding">
+
+    <RelativeLayout
+        android:id="@+id/layout_name_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/recycler_item_name_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/default_margin_2x"
+            android:paddingLeft="@dimen/large_padding"
+            android:paddingRight="@dimen/small_padding"
+            android:singleLine="true"
+            android:textColor="@color/default_white"
+            android:textSize="@dimen/text_size_f1" />
+
+        <ImageView
+            android:id="@+id/recycler_item_level_img"
+            android:layout_width="@dimen/user_rank_size"
+            android:layout_height="@dimen/user_rank_size"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_achievement" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/recycler_item_rights_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:textColor="@color/grayscale3"
+        android:textSize="@dimen/text_size_f2" />
+
+
+    <TextView
+        android:id="@+id/recycler_item_login_site_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/grayscale3"
+        android:textSize="@dimen/text_size_f2" />
+
+    <TextView
+        android:id="@+id/recycler_item_login_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/grayscale3"
+        android:textSize="@dimen/text_size_f2" />
+
+</LinearLayout>

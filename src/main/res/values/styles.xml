@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--Button style default-->
+	<style name="button_default" parent="android:Widget.Button">
+		<item name="android:background">@drawable/button_red_background_rounded</item>
+		<item name="android:focusable">true</item>
+		<item name="android:clickable">true</item>
+		<item name="android:textColor">@drawable/button_textcolor</item>
+		<item name="android:textSize">@dimen/text_size_f4</item>
+		<item name="android:gravity">center_vertical|center_horizontal</item>
+	</style>
+
+	<style name="dialog_default" parent="android:Theme.Dialog">
+		<item name="android:buttonStyle">@style/button_default</item>
+		<item name="android:windowTitleStyle">@style/custom_title_style</item>
+		<item name="android:windowAnimationStyle">@style/custom_dialog_animation</item>
+		<item name="android:windowBackground">@drawable/dialog_custom</item>
+	</style>
+
+	<style name="dialog_default_transparent" parent="dialog_default">
+		<item name="android:windowBackground">@color/transparent</item>
+	</style>
+
+	<style name="dialog_notitlebar" parent="dialog_default">
+		<item name="android:windowNoTitle">true</item>
+	</style>
+
+	<!--透明的dialog-->
+	<style name="dialog_notitlebar_transparent" parent="dialog_notitlebar">
+		<item name="android:windowBackground">@color/transparent</item>
+	</style>
+
+	<style name="dialog_notitlebar_transparent_no_anim" parent="dialog_notitlebar_transparent">
+		<item name="android:windowAnimationStyle">@null</item>
+	</style>
+
+	<!--透明的dialog,从中间变大的动画-->
+	<style name="dialog_notitlebar_transparent_slowanimation" parent="dialog_notitlebar_transparent">
+		<item name="android:windowAnimationStyle">@style/slow_dialog_animation</item>
+	</style>
+
+	<style name="dialog_notitlebar_white" parent="dialog_notitlebar">
+		<item name="android:windowBackground">@drawable/dialog_custom_white</item>
+	</style>
+
+	<style name="custom_title_style">
+		<item name="android:maxLines">1</item>
+		<item name="android:scrollHorizontally">true</item>
+		<item name="android:textSize">@dimen/text_size_f4</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@color/dialog_title_text_color</item>
+		<item name="android:textAppearance">@android:style/TextAppearance.DialogWindowTitle</item>
+	</style>
+
+	<style name="custom_dialog_animation">
+		<item name="android:windowEnterAnimation">@anim/slide_bottom_enter</item>
+		<item name="android:windowExitAnimation">@anim/slide_bottom_exit</item>
+	</style>
+
+	<style name="slow_dialog_animation">
+		<item name="android:windowEnterAnimation">@anim/slide_center_enter</item>
+		<item name="android:windowExitAnimation">@anim/slide_center_exit</item>
+	</style>
+
+	<style name="custom_rating_bar" parent="@android:style/Widget.RatingBar">
+		<item name="android:progressDrawable">@drawable/ratingbar_star_custom</item>
+		<item name="android:indeterminateDrawable">@drawable/ratingbar_star_custom</item>
+		<item name="android:minHeight">@dimen/ratingbar_height</item>
+		<item name="android:maxHeight">@dimen/ratingbar_height</item>
+	</style>
+
+	<style name="device_name_edit" parent="@android:style/Widget.EditText">
+		<item name="android:background">@android:color/transparent</item>
+	</style>
+
+	<style name="backgroundWhite">
+		<item name="android:background">@color/default_white</item>
+	</style>
+
+	<style name="dialogCustomWhite">
+		<item name="android:background">@drawable/dialog_custom_white</item>
+	</style>
+
+</resources>

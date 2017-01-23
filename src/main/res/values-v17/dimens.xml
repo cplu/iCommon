@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!--dialog related-->
+	<dimen name="dialog_horizontal_margin">0dp</dimen>
+	<!--rating dialog-->
+	<dimen name="padding_checkbox">5dp</dimen>
+</resources>

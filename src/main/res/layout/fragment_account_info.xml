@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/backgroundWhite">
+
+    <include
+        android:id="@+id/account_top"
+        layout="@layout/comp_title_with_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/layout_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/account_top"
+        android:paddingTop="@dimen/large_padding"
+        android:background="@drawable/selector_custom_pressed"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/large_margin_3x"
+            android:text="@string/avatar"
+            android:textSize="@dimen/text_size_f2"
+            android:textColor="@color/default_black"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></View>
+
+        <ImageView
+            android:id="@+id/account_avatar_image"
+            android:layout_width="@dimen/avatar_image_width"
+            android:layout_height="@dimen/avatar_image_height"
+            android:layout_marginRight="@dimen/fragment_right_margin" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/log_out_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/large_margin_3x"
+        android:layout_marginRight="@dimen/large_margin_3x"
+        android:layout_marginBottom="@dimen/large_margin_5x"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/small_padding"
+        android:text="@string/network_logout"
+        android:textSize="@dimen/text_size_f4"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_recycled"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_avatar"
+        android:layout_above="@id/log_out_btn"
+        android:layout_marginTop="@dimen/large_margin_2x" />
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></View>-->
+
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="@dimen/dialog_horizontal_margin"
+				android:layout_marginRight="@dimen/dialog_horizontal_margin"
+				android:background="@drawable/dialog_custom"
+				android:padding="@dimen/small_padding"
+	>
+
+	<TextView
+		android:id="@+id/dlg_header_hint"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_marginLeft="@dimen/large_margin"
+		android:layout_marginRight="@dimen/large_margin"
+		android:includeFontPadding="false"
+		android:gravity="center"
+		android:text="@string/login_failed_hint"
+		android:textColor="@color/light_red"
+		android:textSize="@dimen/text_size_f5"
+		android:textStyle="bold"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/dlg_header_hint"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="@dimen/large_margin"
+		android:layout_marginLeft="@dimen/large_margin"
+		android:layout_marginRight="@dimen/large_margin"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/btn_retry"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="@dimen/default_margin_2x"
+			android:layout_weight="1"
+			android:padding="@dimen/small_padding"
+			android:text="@string/login_retry"
+			android:textColor="@color/default_white"
+			android:textSize="@dimen/text_size_f4"
+			/>
+
+		<Button
+			android:id="@+id/btn_change_password"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/default_margin"
+			android:layout_weight="1"
+			android:padding="@dimen/small_padding"
+			android:text="@string/login_change_password"
+			android:textColor="@color/default_white"
+			android:textSize="@dimen/text_size_f4"
+			android:background="@drawable/bg_btn_dim"/>
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@drawable/selector_pressed_white_to_gray">
+
+	<TextView
+		android:id="@+id/item_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:paddingTop="@dimen/large_margin_1.5x"
+		android:paddingBottom="@dimen/large_margin_1.5x"
+		android:layout_centerVertical="true"
+		android:singleLine="true"
+		android:textStyle="bold"
+		android:textColor="@color/transparent_gray_e6"
+		android:textSize="@dimen/text_size_f2" />
+
+	<ImageView
+		android:id="@+id/btn_forward"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:scaleType="centerInside"
+		android:src="@drawable/btn_arrow_forward"
+		/>
+
+	<TextView
+		android:id="@+id/item_description"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toLeftOf="@id/btn_forward"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="@dimen/large_margin"
+		android:textColor="@color/grayscale3"
+		android:textSize="@dimen/text_size_f3" />
+
+</RelativeLayout>

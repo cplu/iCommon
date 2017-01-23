@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="@drawable/selector_custom_pressed"
+				android:minHeight="@dimen/list_item_min_height">
+
+	<ImageView
+		android:id="@+id/device_item_icon_view"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:src="@drawable/icon_device"/>
+
+	<LinearLayout
+		android:id="@+id/device_item_text_layout"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="10dp"
+		android:layout_toRightOf="@+id/device_item_icon_view"
+		android:orientation="vertical">
+
+		<TextView
+			android:id="@+id/device_item_name_view"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:singleLine="true"
+			android:text=""
+			android:textSize="@dimen/text_size_f2"
+			android:textColor="@color/default_black"/>
+
+		<TextView
+			android:id="@+id/device_item_date_view"
+			android:layout_width="wrap_content"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:singleLine="true"
+			android:text=""
+			android:textSize="@dimen/text_size_f1"
+			android:textColor="@color/default_black"/>
+	</LinearLayout>
+
+	<ImageView
+		android:id="@+id/device_item_forward_btn"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:background="@android:color/transparent"
+		android:scaleType="centerInside"
+		android:src="@drawable/btn_arrow_forward"/>
+
+	<TextView
+		android:id="@+id/device_item_state_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_marginRight="3dp"
+		android:layout_toLeftOf="@+id/device_item_forward_btn"
+		android:layout_toRightOf="@+id/device_item_text_layout"
+		android:gravity="right"
+		android:text=""
+		android:textColor="@color/device_pending"
+		android:textSize="@dimen/text_size_f4"/>
+
+	<View
+		android:id="@+id/separatorView"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="@dimen/fragment_left_margin"
+		android:layout_marginRight="@dimen/fragment_right_margin"
+		android:background="@color/grayscale3"/>
+
+</RelativeLayout>

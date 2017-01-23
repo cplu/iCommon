@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<TextView
+		android:id="@+id/my_points_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="@dimen/large_margin_2x"
+		android:singleLine="true"
+		android:text="@string/my_points"
+		android:textColor="@color/default_white"
+		android:textSize="@dimen/text_size_f3" />
+
+	<ImageView
+		android:id="@+id/my_points_back"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@id/my_points_title"
+		android:layout_alignParentLeft="true"
+		android:layout_alignTop="@id/my_points_title"
+		android:layout_marginLeft="@dimen/large_margin_2x"
+		android:padding="@dimen/tiny_padding"
+		android:scaleType="fitEnd"
+		android:src="@drawable/icon_navi_back" />
+
+
+	<com.windfindtech.icommon.view.FixedRatioTextView
+		android:id="@+id/my_points_value"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/my_points_title"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="@dimen/large_margin_3x"
+		app:widthRatio="1"
+		app:heightRatio="1"
+		app:fixedSide="height"
+		android:gravity="center"
+		android:background="@drawable/bg_pts_circle"
+		android:paddingBottom="@dimen/large_padding_1.5x"
+		android:paddingTop="@dimen/large_padding_1.5x"
+		android:singleLine="true"
+		android:text="@string/pts_undefined"
+		android:textColor="@color/default_white"
+		android:textSize="@dimen/text_size_f7"
+		android:textStyle="bold"
+		/>
+
+	<TextView
+		android:id="@+id/points_records"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/my_points_value"
+		android:layout_marginBottom="@dimen/large_margin"
+		android:background="@drawable/bg_rounded_corner_gray"
+		android:paddingBottom="@dimen/tiny_padding"
+		android:paddingLeft="@dimen/semi_small_padding"
+		android:paddingRight="@dimen/semi_small_padding"
+		android:paddingTop="@dimen/tiny_padding"
+		android:text="@string/points_records"
+		android:textColor="@color/default_white"
+		android:textSize="@dimen/text_size_f3" />
+
+
+	<TextView
+		android:id="@+id/points_store"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:layout_below="@id/my_points_value"
+		android:layout_marginBottom="@dimen/large_margin"
+		android:background="@drawable/bg_rounded_corner_blue_purple"
+		android:paddingBottom="@dimen/tiny_padding"
+		android:paddingLeft="@dimen/semi_small_padding"
+		android:paddingRight="@dimen/semi_small_padding"
+		android:paddingTop="@dimen/tiny_padding"
+		android:text="@string/points_store"
+		android:textColor="@color/grayscale5"
+		android:textSize="@dimen/text_size_f3" />
+
+	<ImageView
+		android:id="@+id/bg_img_shadow"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/points_store"
+		android:background="@drawable/user_fragment_front_shadow" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bg_img_shadow">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_my_points"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grayscale5" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@id/bg_img_shadow"-->
+    <!--android:background="@color/grayscale5">-->
+
+	<!--<TextView-->
+	<!--android:id="@+id/textview_my_points_obtain"-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:layout_height="wrap_content"-->
+	<!--android:paddingBottom="@dimen/default_padding"-->
+	<!--android:paddingLeft="@dimen/fragment_left_margin"-->
+	<!--android:paddingTop="@dimen/default_padding"-->
+	<!--android:text="今日已获得100分(每日最高可获得600分)"-->
+	<!--android:textColor="@color/grayscale3"-->
+	<!--android:textSize="@dimen/text_size_f2" />-->
+
+	<!--<android.support.v7.widget.RecyclerView-->
+	<!--android:id="@+id/recycler_my_points"-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:layout_height="wrap_content"-->
+	<!--android:layout_below="@id/textview_my_points_obtain"-->
+	<!--/>-->
+
+	<!--<TextView-->
+	<!--android:id="@+id/textview_my_achievement"-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:layout_height="wrap_content"-->
+	<!--android:layout_below="@id/recycler_my_points"-->
+	<!--android:paddingBottom="@dimen/default_padding"-->
+	<!--android:paddingLeft="@dimen/fragment_left_margin"-->
+	<!--android:paddingTop="@dimen/large_padding"-->
+	<!--android:text="成就共计200分"-->
+	<!--android:textColor="@color/grayscale3"-->
+	<!--android:textSize="@dimen/text_size_f2" />-->
+	<!--<include-->
+	<!--android:id="@+id/layout_achievement"-->
+	<!--android:layout_height="wrap_content"-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:layout_below="@id/textview_my_achievement"-->
+	<!--layout="@layout/layout_my_points_item"-->
+	<!--/>-->
+
+	<!--<include-->
+	<!--android:id="@+id/layout_points_rule"-->
+	<!--android:layout_height="wrap_content"-->
+	<!--android:layout_width="match_parent"-->
+	<!--android:layout_alignParentBottom="true"-->
+	<!--android:layout_marginBottom="@dimen/large_margin_2x"-->
+	<!--layout="@layout/layout_my_points_item"-->
+	<!--/>-->
+
+	<!--</RelativeLayout>-->
+</RelativeLayout>
