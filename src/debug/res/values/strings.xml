@@ -1,0 +1,5 @@
+<resources>
+	<!--compile layer settings-->
+	<string name="compile_level">debug</string>
+	<string name="sharedUserId">com.windfindtech.app.shareduserid.debug</string>
+</resources>
