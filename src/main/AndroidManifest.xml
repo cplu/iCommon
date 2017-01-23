@@ -1,0 +1,60 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		  package="com.windfindtech.icommon">
+
+	<uses-sdk
+		android:minSdkVersion="9"
+		android:targetSdkVersion="19"/>
+
+	<!-- library本身需要的权限 -->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+	<application android:allowBackup="false"
+				 android:label="@string/library_name"
+		>
+
+		<activity
+			android:name=".activity.AdvertActivity"
+			android:label="@string/title_activity_ad"
+			android:launchMode="singleTop"
+			android:screenOrientation="portrait">
+		</activity>
+
+		<!--<provider-->
+			<!--android:name=".provider.ICommonProvider"-->
+			<!--android:authorities="${applicationId}.commonprovider"-->
+			<!--android:permission="com.windfindtech.permission.commonprovider"-->
+			<!--android:exported="true">-->
+			<!--&lt;!&ndash;<intent-filter>&ndash;&gt;-->
+				<!--&lt;!&ndash;<action android:name="android.intent.action.MAIN" />&ndash;&gt;-->
+				<!--&lt;!&ndash;<category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;-->
+			<!--&lt;!&ndash;</intent-filter>&ndash;&gt;-->
+		<!--</provider>-->
+
+		<!--<receiver android:name=".receiver.ICommonReceiver"-->
+			<!--android:permission="com.windfindtech.permission.commonprovider">-->
+			<!--<intent-filter>-->
+				<!--<action android:name="com.windfindtech.app.infoupdate" />-->
+				<!--<category android:name="${applicationId}"/>-->
+			<!--</intent-filter>-->
+			<!--<intent-filter>-->
+				<!--<action android:name="com.windfindtech.app.infoquery" />-->
+			<!--</intent-filter>-->
+		<!--</receiver>-->
+
+	</application>
+
+	<!--<permission-->
+		<!--android:name="com.windfindtech.permission.commonprovider"-->
+		<!--android:protectionLevel="signature"-->
+		<!--android:label="@string/common_provider_label"-->
+		<!--android:description="@string/common_provider_description"-->
+		<!--/>-->
+
+	<!--<uses-permission android:name="com.windfindtech.permission.commonprovider"/>-->
+</manifest>
