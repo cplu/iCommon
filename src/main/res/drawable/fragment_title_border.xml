@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This is the line -->
+    <item>
+        <shape>
+            <padding
+                android:left="0dp"
+                android:top="0dp"
+                android:right="0dp"
+                android:bottom="1dp"/>
+            <solid android:color="@color/user_fragment_title_underline"/>
+        </shape>
+    </item>
+    <!-- This is the main color -->
+    <item>
+        <shape>
+            <solid android:color="@color/user_fragment_title_bg"/>
+        </shape>
+    </item>
+
+</layer-list>

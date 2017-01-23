@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:left="@dimen/bg_pts_ring_thickness"
+		android:top="@dimen/bg_pts_ring_thickness"
+		android:right="@dimen/bg_pts_ring_thickness"
+		android:bottom="@dimen/bg_pts_ring_thickness">
+		<shape
+			android:shape="ring"
+			android:thickness="@dimen/bg_pts_ring_thickness"
+			android:innerRadiusRatio="2"
+			android:useLevel="false"
+			>
+			<gradient
+				android:startColor="@color/default_pink"
+				android:endColor="@color/dark_blue"
+				android:angle="270"
+				>
+			</gradient>
+		</shape>
+	</item>
+	<item
+		android:left="7dp"
+		android:top="7dp"
+		android:right="7dp"
+		android:bottom="7dp"
+		>
+		<shape
+			android:shape="ring"
+			android:thickness="1dp"
+			android:innerRadiusRatio="2"
+			android:useLevel="false"
+			>
+			<solid android:color="@color/dark_blue" />
+		</shape>
+	</item>
+</layer-list>
