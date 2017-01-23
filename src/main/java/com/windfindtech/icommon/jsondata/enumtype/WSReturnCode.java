@@ -1,0 +1,75 @@
+package com.windfindtech.icommon.jsondata.enumtype;
+
+import com.google.gson.annotations.SerializedName;
+
+/**
+ * Created by cplu on 2015/6/15.
+ */
+public enum WSReturnCode {
+    @SerializedName("authentication_failed")
+    authentication_failed,
+    @SerializedName("authentication_required")
+    authentication_required,
+    @SerializedName("unknown_error")
+    unknown_error,
+    @SerializedName("not_authorized")
+    not_authorized,
+    @SerializedName("not_implemented")
+    not_implemented,
+    @SerializedName("not_supported")
+    not_supported,
+    @SerializedName("error")
+    error,
+    @SerializedName("parameter_error")
+    parameter_error,
+    @SerializedName("internal_service_error")
+    internal_service_error,
+    @SerializedName("bad_request")
+    bad_request,
+    @SerializedName("forbidden")
+    forbidden,
+    @SerializedName("method_not_allowed")
+    method_not_allowed,
+    @SerializedName("not_acceptable")
+    not_acceptable,
+    @SerializedName("not_found")
+    not_found,
+    @SerializedName("unsupported_media_type")
+    unsupported_media_type,
+    @SerializedName("conflict")
+    conflict,
+    @SerializedName("precondition_failed")
+    precondition_failed,
+    @SerializedName("internal_server_error")
+    internal_server_error,
+    @SerializedName("service_unavailable")
+    service_unavailable,
+    @SerializedName("user_not_found")
+    user_not_found,
+    @SerializedName("user_forbidden")
+    user_forbidden,
+    @SerializedName("user_name_already_exists")
+    user_name_already_exists,
+    @SerializedName("user_name_and_password_not_match")
+    user_name_and_password_not_match,
+    @SerializedName("too_many_failed_login_attempts")
+    too_many_failed_login_attempts,
+    @SerializedName("password_incorrect")
+    password_incorrect,
+    @SerializedName("password_expired")
+    password_expired,
+    @SerializedName("challenge_incorrect")
+    challenge_incorrect,
+    @SerializedName("need_challenge")
+    need_challenge,
+    @SerializedName("password_too_simple")
+    password_too_simple,
+    @SerializedName("long_time_no_see")
+    long_time_no_see,
+    @SerializedName("already_participated")
+    already_participated,
+    @SerializedName("os_not_support")
+    os_not_support,
+    @SerializedName("please_open_in_browser")
+    please_open_in_browser,
+}
