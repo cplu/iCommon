@@ -1,0 +1,93 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+//        classpath fileTree(dir: 'apt',
+//                includes: ['*.jar'])
+//        classpath 'com.android.tools.build:gradle:2.1.3'
+//        classpath files('apt/butterknife-gradle-plugin-8.2.1.jar')
+//        classpath (name: 'butterknife-gradle-plugin-8.2.1', ext: 'jar')
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.3.0'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'android-apt'
+apply plugin: 'com.jakewharton.butterknife'
+
+repositories {
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android {
+    defaultPublishConfig 'release'
+    publishNonDefault true
+//    productFlavors {
+//        library {
+//
+//        }
+//        libraryV7 {
+//
+//        }
+//    }
+
+    compileSdkVersion 24
+    buildToolsVersion "23.0.2"
+//    useLibrary 'org.apache.http.legacy'
+
+    buildTypes {
+        debug{
+        }
+        release{
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+        debug {
+            res.srcDirs = ['res']
+            resources.srcDirs = ['res']
+        }
+
+        debug.setRoot('src/debug')
+        release.setRoot('src/release')
+    }
+
+    defaultConfig {
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+}
+
+def supportLibraryVersion = "24.2.0"
+
+dependencies {
+    //    compile files('aars/support-v4-22.0.0-local.aar', 'aars/recyclerview-v7-22.0.0-local.aar')
+    //    compile(name:'support-v4-22.0.0-local', ext:'aar')
+    //    compile(name:'recyclerview-v7-22.0.0-local', ext:'aar')
+
+    apt 'com.jakewharton:butterknife-compiler:8.3.0'
+    compile fileTree(include: '*.jar', dir: 'libs')
+    //    libraryV7Compile ':rxandroid'
+    compile(name: 'rxandroid-1.2.1', ext: 'aar')
+    compile(name: 'butterknife-8.3.0', ext: 'aar')
+//    apt(name: 'apt/butterknife-compiler-8.2.1.jar')
+    testCompile 'junit:junit:4.12'
+    androidTestCompile "com.android.support:support-annotations:$supportLibraryVersion"
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
+    androidTestCompile 'com.android.support.test:rules:0.4.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
+    compile "com.android.support:gridlayout-v7:$supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
+}
